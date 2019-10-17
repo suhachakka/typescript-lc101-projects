@@ -3,7 +3,15 @@
 
 // Part 1: Add the 5 variables here
 
-
+let spacecraftName:string ='Determination';
+let speedMph:number = 17500;
+let kilometersToMars:number = 225000000;
+let kilometersToTheMoon:number = 384400;
+let milesPerKilometer:number=0.621;
+let milesToMars:number = kilometersToMars * milesPerKilometer;
+let hoursToMars:number = milesToMars / speedMph;
+let daysToMars:number =hoursToMars /24;
+console.log(`${spacecraftName} days to mars is ${daysToMars}`)
 
 
 
