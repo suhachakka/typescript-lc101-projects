@@ -15,8 +15,24 @@ let kilometersToTheMoon: number = 384400;
 // }
 
 // Define your Spacecraft class here:
+class SpaceCraft{
+    name:string;
+    milesPerKilometer : number=0.621;
+    speedMph :number;
+    constructor(name:string,speedMph:number){
+        this.name =name;
+        this.speedMph= speedMph;
 
-
+    }
+    getDaysToLocation(kilometersAway: number): number {
+        let milesAway: number = kilometersAway * this.milesPerKilometer;
+          let hours: number = milesAway / this.speedMph;
+         return hours / 24;
+    }
+}
+let spaceShuttle = new SpaceCraft('Determination', 17500);
+console.log(`${spaceShuttle.name} would take  ${spaceShuttle.getDaysToLocation(kilometersToMars)}  days to get to mars`);
+console.log(`${spaceShuttle.name} would take  ${spaceShuttle.getDaysToLocation(kilometersToTheMoon)}  days to get to moon`);
 
 // Create an instance of the class here:
 
